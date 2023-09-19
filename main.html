@@ -15,10 +15,13 @@
   let h = arr[0];
   let sh = h;
   for (let i = 1; i < arr.length; i++) { 
-    if(arr[i]>arr[i-1]){
+    if(arr[i]>h){
       sh=h
       h=arr[i] 
     }
+	else if(arr[i]<h){
+		sh = Math.max(sh, arr[i])
+	}
   }
   return sh
 		}
