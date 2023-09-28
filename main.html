@@ -9,9 +9,9 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
+			//Write your code here 
+			if(arr.length==1) return -infinity 
 			
-			 arr.sort((a,b)=>a-b)
 			  let h = arr[0];
 			  let sh = h;
 			  for (let i = 1; i < arr.length; i++) { 
@@ -23,6 +23,8 @@
 					sh = Math.max(sh, arr[i])
 				}
 			  }
+
+			if(sh==h) return -infinity
 			  return sh
 		} 
 
